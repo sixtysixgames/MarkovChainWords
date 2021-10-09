@@ -78,13 +78,15 @@
                     <input type="button" value="Clear Words" onclick="return clearWords();" />
                     <br />
                     <h3>Some ready made lists</h3>
-                    <input type="button" value="The Elements" onclick="return doElements();" />
+
                     <input type="button" value="Countries" onclick="return doCountries();" />
+                    <input type="button" value="Capital Cities" onclick="return doCapitals();" />
                     <input type="button" value="English Counties" onclick="return doCounties();" />
-                    <input type="button" value="The States" onclick="return doStates();" />
-                    <input type="button" value="Common Words" onclick="return doCommonWords();" />
+                    <input type="button" value="American States" onclick="return doStates();" />
                     <input type="button" value="Hamlet" onclick="return doHamlet();" />
                     <br />
+                    <input type="button" value="The Elements" onclick="return doElements();" />
+                    <input type="button" value="Common Words" onclick="return doCommonWords();" />
                     <input type="button" value="Mammals" onclick="return doMammals();" />
                     <input type="button" value="Birds" onclick="return doBirds();" />
                     <input type="button" value="Fish" onclick="return doFish();" />
@@ -111,6 +113,8 @@
                     For each word we record which group is a start and which group is an end.<br />
                     We also record which group can follow another group.<br />
                     We then output new words by randomly selecting a start group, then slowly build up the word by selecting a valid following group until we find an end group.
+                    <br />
+                    Note that hyphens will not be removed and are treated as consonants, so you can use them to link words e.g. New-York will have the consonant group w-Y
                 </p>
             </div> <!-- end of content -->
             <div class="footer">

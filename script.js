@@ -189,13 +189,12 @@ function doStuff3() {
         followstring += "<dd>" + dict[ustarts[index]].join(" ") + "</dd>";
     }
     followstring += "</dl>";
-
     //document.getElementById("followers").innerHTML = followstring;
 
     // right now make up some words
     // get a random start
     // while not an end
-    document.getElementById("newwords").innerHTML = "";
+    let newWords = [];
     for (let i = 0; i < 100; i++) {
         let newWord = "";
         let newStart = ustarts[rand(ustarts.length - 1)]
@@ -225,10 +224,15 @@ function doStuff3() {
 
         // put hyphens back
         newWord = newWord.replace(hyphenregexp, hyphen);
-        // output
-        document.getElementById("newwords").innerHTML += newWord + " ";
+        if(!newWords.includes(newWord)){
+            newWords.push(newWord);
+        }
     }
-
+    newWords.sort();
+    
+    // output
+        document.getElementById("newwords").innerHTML = "";
+        document.getElementById("newwords").innerHTML += newWords.join(", ");
     //
     return false;
 }

@@ -71,10 +71,10 @@ function doStuff3() {
     let markovdepth = parseInt(markovdepthval);
 
     // replace hyphens
-    words = words.replace(/[ \-]+/g, hyphenreplace);
+    words = words.replace(/[\-]+/g, hyphenreplace);
 
     // substitute punctuation with space
-    words = words.replace(/[ \W0-9]+/g, space);
+    words = words.replace(/[\W0-9]+/g, space);
     // add a space to start and end
     //words = space + words + space;
 
@@ -317,7 +317,7 @@ South-Gloucestershire, South-Yorkshire, Staffordshire, Suffolk, Surrey, Tyne-And
 
 function doStates() {
     document.getElementById("newwords").innerHTML = "";
-    document.getElementById("theCorpus").value = " \
+    document.getElementById("theCorpus").value = "\
 Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida,  \
 Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine,  \
 Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New-Hampshire, New-Jersey,  \
@@ -329,7 +329,7 @@ South-Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West-Virgin
 
 function doCommonWords() {
     document.getElementById("newwords").innerHTML = "";
-    document.getElementById("theCorpus").value = " \
+    document.getElementById("theCorpus").value = "\
 the name of very to through and just form in much is great it think you say that help \
  he low was line for before on turn are cause with same as mean differ his move they right be boy \
  at old one too have does this tell from sentence or set had three by want hot air but well some also \
